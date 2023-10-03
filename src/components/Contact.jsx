@@ -26,13 +26,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    //MBruE1NcQb6ZXJHZK
-    //template_57eb11x
-    //service_3mbxof5
+    
     emailjs
       .send(
-        "service_3mbxof5",
-        "template_57eb11x",
+        //service id "----here-----"
+        //template id "---here----"
         {
           from_name: form.name,
           to_name: "Charls",
@@ -40,7 +38,7 @@ const Contact = () => {
           to_email: "charles241998@gmail.com",
           message: form.message,
         },
-        "MBruE1NcQb6ZXJHZK"
+        //public key "---here---"
       )
       .then(
         () => {
